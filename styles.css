@@ -1,0 +1,5 @@
+body {background-color: rgb(20,20,20)}
+div {border: 1px solid white}
+p {color: white; font-family: Arial}
+button {border: 1px solid white; background-color: rgba(0,0,0,0); color: white}
+button:active {color: darkgrey}
