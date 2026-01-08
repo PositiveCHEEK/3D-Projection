@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+<link rel="stylesheet" href="styles/style.css">
 <body>
     <div style="width: 500px; height: 500px">
         <svg style="width: 500px; height: 500px" id="plain">
@@ -14,12 +12,15 @@
     <input type="range" min="0" max="500" value="250" id="changerY"></input>
     <p>Z Coordinate</p>
     <input type="range" min="500" max="3500" value="1000" id="changerZ"></input>
+    <p id="gyroCheck">Turn Gyroscope mode (unavailable)</p>
+    <input type="checkbox" id="arMode"></input>
     <p>Change figure</p>
     <button id="square">Square</button>
     <button id="triangle">Triangle</button>
     <button id="pentagon">Pentagon</button>
     <button id="pentastar">Pentastar</button>
-    <script src="js/projection.js"></script>
+    
+    <script src="scripts/script.js"></script>
 </body>
 </html>
 
