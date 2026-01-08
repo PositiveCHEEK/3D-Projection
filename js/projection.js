@@ -144,6 +144,22 @@ presetPentastar.addEventListener("click", function () {
     visualise(plain, pentastar)
     dimensify(plain, dimensionDot, dots, depth)
 })
+gyroCheck = document.getElementById("gyroCheck")
+arMode = document.getElementById("arMode")
+if (window.DeviceOrientationEvent) {
+    gyroCheck.innerHTML = `Turn Gyroscope mode (available)`
+}
+arMode.addEventListener("input", function() {
+    if (arMode.checked) {
+        window.addEventListener("deviceorientation", handle = (event) => {
+            dimensionDot.setAttribute("cx", -(-event.gamma+90)*(0-500)/(90+90) + 0)
+            dimensionDot.setAttribute("cy", -(-event.beta+90)*(0-500)/(90+90) + 0)
+            dimensify(plain, dimensionDot, dots, depth)
+    })} else {
+        window.removeEventListener("deviceorientation", handle)
+    }
+})
 
 visualise(plain, square)
 dimensify(plain, dimensionDot, dots, depth)
+
